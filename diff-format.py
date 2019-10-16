@@ -3,11 +3,9 @@
 from argparse import ArgumentParser, ArgumentDefaultsHelpFormatter
 from diff import Diff
 
-def main(diff_file, output_file):
+def main(diff_file, output_file, ignore_files):
 
-    IGNORE = ["GNUmakefile", ".gitignore", "gradelib.py", "grade-lab2"]
-    
-    d = Diff(diff_file, IGNORE)
+    d = Diff(diff_file, ignore_files.split(","))
     d.export(output_file)
 
 if __name__ == "__main__":
@@ -27,7 +25,12 @@ if __name__ == "__main__":
             help='Output parsed file'
     )
 
+    parser.add_argument(
+            '--ignore',
+            help='Ignore files (comma separated values).'
+    )
+
     args = parser.parse_args()
  
-    main(args.diff, args.output)
+    main(args.diff, args.output, args.ignore)
 

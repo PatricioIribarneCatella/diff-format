@@ -5,12 +5,16 @@ Takes a _DIFF_ formated file and removes all the unnecessary lines returning a n
 ## Run
 
 ```bash
- $ ./diff-format.py --diff=FILE [--output=FILE]
+ $ ./diff-format.py --diff=FILE [--output=FILE | --ignore=FILES]
 ```
 
 #### Arguments
 - `diff`: path to the _diff_ formated file
 - `output`: if not specified the output is shown in the _standard output_
+- `ignore`: comma separated values, for exaple:
+```bash
+   --ignore=Makefile,.gitinore,script.sh
+```
 
 ## Clean
 
