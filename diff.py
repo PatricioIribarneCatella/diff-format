@@ -73,7 +73,7 @@ class Diff(object):
     def export(self, output):
 
         if output is None:
-            self._print_data(self)
+            self._print_data()
             return
 
         with open(output, "w") as f:
