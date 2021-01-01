@@ -1,4 +1,3 @@
-
 class Diff(object):
 
     def __init__(self, path, ignore_files):
@@ -83,5 +82,3 @@ class Diff(object):
                     f.write(func + "\n")
                     for line in code:
                         f.write(line + "\n")
-
-
