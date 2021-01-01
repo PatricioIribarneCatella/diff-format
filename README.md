@@ -1,6 +1,6 @@
 # diff-format
 
-Takes a _DIFF_ formatted file and removes all the unnecessary lines returning a new file containing just the changed lines (the ones that has a `+` at the beggining).
+Takes a _**DIFF**_ formatted file and removes all the unnecessary lines returning a new file containing just the changed lines (the ones that has a `+` at the beggining).
 
 ## Run
 
